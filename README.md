@@ -7,15 +7,21 @@
 - ohday.h头文件主要定义了本项目所需要的基本数据结构，包括Vector2f（2维向量）、VectorNf（高维向量）、RandomDevice（产生符合线性分布或者高斯分布的随机数）、Delta（方便快速排序的比较）四个类。
 
 - sample.h头文件定义了：  
- - RFParam虚基类，其主要包含Param2Landmarks虚函数（3D关节点投影到剪影上的2D关节点）、DrawLandmarks虚函数（在剪影上标记出2D关节点）；
- - RFSampleVecNode结构体，包含随机投影时所需的射线角度和系数；
- - RFSample模板虚基类。其主要包含Sampling（采样）虚函数、GetParamDelta(计算更新后和未更新骨架的差)函数、SetStatus（设置0、1状态）函数、GetStatus(根据0、1状态得到0-31的状态)、UpdateParam(更新骨架坐标)函数。
- - RFBodyJoints类，其公共继承了RFParam虚基类；
- - RFSample_BodyJoints类，其公共继承了RFSample模板虚基类。主要实例化了采样函数。  
+ 	1) RFParam虚基类，其主要包含Param2Landmarks虚函数（3D关节点投影到剪影上的2D关节点）、DrawLandmarks虚函数（在剪影上标记出2D关节点）；
+
+	2)RFSampleVecNode结构体，包含随机投影时所需的射线角度和系数；
+
+	3)RFSample模板虚基类。其主要包含Sampling（采样）虚函数、GetParamDelta(计算更新后和未更新骨架的差)函数、SetStatus（设置0、1状态）函数、GetStatus(根据0、1状态得到0-31的状态)、UpdateParam(更新骨架坐标)函数。
+
+	4)RFBodyJoints类，其公共继承了RFParam虚基类；
+
+	5)RFSample_BodyJoints类，其公共继承了RFSample模板虚基类。主要实例化了采样函数。  
 
 - train.h头文件定义了：
- - RFtrain模板虚基类，其主要实现训练的过程；
- - RFTrainBodyJoints类，其公共继承了RFtrain模板虚基类，主要实例 化虚基类中的SetSamples虚函数和GenerateRandomVector虚函数。
+
+	1)RFtrain模板虚基类，其主要实现训练的过程；
+
+ 	2)RFTrainBodyJoints类，其公共继承了RFtrain模板虚基类，主要实例 化虚基类中的SetSamples虚函数和GenerateRandomVector虚函数。
 - test.h头文件只定义了RFtest模板类，实现测试的过程.
 
 - main.cpp源文件，主要定义快速排序函数、搜寻相似骨架函数、并利用switch实现训练和测试过程的选择。
