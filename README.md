@@ -6,9 +6,9 @@
 
 - ohday.h头文件主要定义了本项目所需要的基本数据结构，包括Vector2f（2维向量）、VectorNf（高维向量）、RandomDevice（产生符合线性分布或者高斯分布的随机数）、Delta（方便快速排序的比较）四个类。
 
-- sample.h头文件定义了：  
+- sample.h头文件定义了:
 
- 	1) RFParam虚基类，其主要包含Param2Landmarks虚函数（3D关节点投影到剪影上的2D关节点）、DrawLandmarks虚函数（在剪影上标记出2D关节点）；
+ 	1)RFParam虚基类，其主要包含Param2Landmarks虚函数（3D关节点投影到剪影上的2D关节点）、DrawLandmarks虚函数（在剪影上标记出2D关节点);
 
 	2)RFSampleVecNode结构体，包含随机投影时所需的射线角度和系数；
 
