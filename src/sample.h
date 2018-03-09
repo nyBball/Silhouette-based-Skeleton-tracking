@@ -3,7 +3,7 @@
 #define RF_SAMPLE
 
 #include"stdafx.h"
-#include "ohday.h"
+#include "utils.h"
 
 extern Eigen::Matrix3d Identity;
 extern Eigen::Vector3d zero;

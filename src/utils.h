@@ -1,5 +1,5 @@
-#ifndef OHDAY_UTILITY
-#define OHDAY_UTILITY
+#ifndef UTILITY
+#define UTILITY
 
 #include <vector>
 #include <string>
@@ -232,15 +232,8 @@ namespace ohday
 			return res;
 		}
 
-		float cov(VectorNf& v)
+		float cov(VectorNf& v)//协方差
 		{
-
-			//RFVectorNf xy = this->innermult(v);
-
-			//float res = xy.expectation() - this->expectation() * v.expectation();
-
-			//return res;
-
 			float xy_temp = 0.0f;
 			for (int i = 0; i < dims; i++)
 			{
@@ -254,7 +247,7 @@ namespace ohday
 			return res;
 		}
 
-		float variance()
+		float variance()//方差 e(x^2)-e(x)^2
 		{
 
 			VectorNf x2 = this->innermult(*this);
@@ -376,4 +369,4 @@ namespace ohday
 	};
 };
 
-#endif //OHDAY_UTILITY
+#endif //UTILITY

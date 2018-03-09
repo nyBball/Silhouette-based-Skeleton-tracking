@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "random_fern_train.h"
-#include "random_fern_test.h"
+#include "train.h"
+#include "test.h"
 #include "math.h"
 
 #define fHFOV 1.0144686707507438

@@ -1,7 +1,7 @@
 #ifndef RF_TEST
 #define RF_TEST
 
-#include "random_fern_sample.h"
+#include "sample.h"
 
 namespace random_ferns
 {

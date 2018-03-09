@@ -2,7 +2,7 @@
 #ifndef RF_TRAIN
 #define RF_TRAIN
 
-#include "random_fern_sample.h"
+#include "sample.h"
 extern char DataPath[300];
 namespace random_ferns
 {
